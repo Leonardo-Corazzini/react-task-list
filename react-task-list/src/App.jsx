@@ -20,7 +20,7 @@ function App() {
             <h2>Current Task ({taskInProgress.length})</h2>
             {taskInProgress.map((task) =>
               <li key={task.id}>
-                <p>{task.title} <span className='tag'>{task.state}</span></p>
+                <p>{task.title} <span className={task.state === 'in_progress' ? 'tag-inprogress' : 'tag-backlog'}>{task.state}</span></p>
                 <p>Priority: {task.priority}</p>
                 <p>Est. time {task.estimatedTime}</p>
 
@@ -34,7 +34,7 @@ function App() {
             <h2>Current Task ({taskCompleted.length})</h2>
             {taskCompleted.map((task) =>
               <li key={task.id}>
-                <p>{task.title} <span className='tag'>{task.state}</span></p>
+                <p>{task.title} <span className='tag-completed'>{task.state}</span></p>
                 <p>Priority: {task.priority}</p>
                 <p>Est. time {task.estimatedTime}</p>
               </li>
