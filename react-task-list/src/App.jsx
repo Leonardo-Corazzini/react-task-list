@@ -1,15 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import tasks from './tasks'
 
 function App() {
-  
 
-  return
-  
-   
- 
+  const taskInProgress = tasks.filter((task) => (task.state !== 'completed'))
+  console.log(taskInProgress)
+  const taskCompleted = tasks.filter((task) => (task.state === 'completed'))
+  // console.log(taskCompleted)
+
+
+  return (
+    <main>
+      <ul>
+        {taskInProgress.map((task) =>
+          <li key={task.id}>{task.title}</li>
+        )}
+      </ul>
+      <ul>
+        {taskCompleted.map((task) =>
+          <li key={task.id}>{task.title}</li>
+        )}
+      </ul>
+
+    </main>
+  )
+
+
+
 }
 
 export default App
