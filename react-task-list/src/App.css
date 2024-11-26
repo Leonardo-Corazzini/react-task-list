@@ -1,15 +1,3 @@
-/* reset rules */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  color: currentColor;
-  list-style: none;
-}
-
 .header {
   background-color: beige;
   padding: 20px 15px;
@@ -33,21 +21,21 @@ li>p:first-child {
   font-weight: bold;
 }
 
-.tag-inprogress {
+.in_progress {
   background-color: rgb(181, 245, 33);
   color: white;
   margin-left: 15px;
   padding: 7px 10px;
 }
 
-.tag-backlog {
+.backlog {
   background-color: rgb(33, 132, 245);
   color: white;
   margin-left: 15px;
   padding: 7px 10px;
 }
 
-.tag-completed {
+.completed {
   background-color: green;
   color: white;
   margin-left: 15px;

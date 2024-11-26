@@ -1,0 +1,11 @@
+/* reset rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    color: currentColor;
+    list-style: none;
+}
